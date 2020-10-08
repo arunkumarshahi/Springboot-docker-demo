@@ -31,7 +31,7 @@ Deploy docker image on AWS ECS
 
 * Execute following command to retrieve AWS ECR credentail to upload 
 
-**aws ecr get-login --registry-ids <<Account_NO>>
+*  aws ecr get-login --registry-ids <<Account_NO>>
 
 **following output will get response of above command 
 
