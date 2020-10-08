@@ -28,17 +28,29 @@ Stop the container
 
 Deploy docker image on AWS ECS
 * Create a registry in ECR
+
 * Execute following command to retrieve AWS ECR credentail to upload 
+
 **aws ecr get-login --registry-ids <<Account_NO>>
+
 **following output will get response of above command 
+
 **sudo docker login -u AWS -p xxxxxxxxxxxxxxxxxxxxxffffffffffffffffffffkkkkkkkkkkkkkkkkkkkggggggggg== -e none https://account_no.dkr.ecr.us-east-1.amazonaws.com
+
 **Login to docker using above credentail 
+
 **sudo docker login -u AWS -p xxxxxxxxxxxxxxxxxxxxxffffffffffffffffffffkkkkkkkkkkkkkkkkkkkggggggggg==  https://account_no.dkr.ecr.us-east-1.amazonaws.com
+
 **Create docker image 
+
 **docker build -t hello-spring-demo .
+
 **tag docker image to ECR repository 
+
 **docker tag hello-spring-demo:latest <<Account_no>>.dkr.ecr.us-east-1.amazonaws.com/spring-boot-hello:latest
+
 **Upload docker image to ECR
+
 **docker push <<Account_no>>.dkr.ecr.us-east-1.amazonaws.com/spring-boot-hello:latest
 
 
