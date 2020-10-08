@@ -23,5 +23,5 @@ Access the application
 Stop the container 
 
 * docker stop 
-* docker rmi -f <<image id>>
+* docker rmi -f image_id
 
