@@ -38,7 +38,8 @@ $ aws ecr get-login --registry-ids <<Account_NO>>
 *  following output will get response of above command 
 
 ```sh
-$   sudo docker login -u AWS -p xxxxxxxxxxxxxxxxxxxxxffffffffffffffffffffkkkkkkkkkkkkkkkkkkkggggggggg== -e none https://account_no.dkr.ecr.us-east-1.amazonaws.com
+$   sudo docker login -u AWS -p xxxxxxxxxxxxxxxxxxxxxffffffffffffffffffffkkkkkkkkkkkkkkkkkkkggggggggg== 
+https://account_no.dkr.ecr.us-east-1.amazonaws.com
 
 ```
 
