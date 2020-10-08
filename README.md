@@ -27,7 +27,7 @@ Stop the container
 
 
 # Deploy docker image on AWS ECS
-* Create a registry in ECR
+* Create a registry in ECR say hello-spring-demo 
 
 * Execute following command to retrieve AWS ECR credentail to upload 
 ```sh
