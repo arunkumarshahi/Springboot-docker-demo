@@ -1,9 +1,6 @@
 {
   "family": "spring-boot-hello",
-  "volumes": [],
-  "executionRoleArn": "arn:aws:iam::571575437313:role/ecsTaskExecutionRole",
-  "taskRoleArn": "arn:aws:iam::571575437313:role/ecsTaskExecutionRole",
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:571575437313:task-definition/spring-boot-hello:4",
+
   "containerDefinitions": [
     {
       "image": "571575437313.dkr.ecr.us-east-1.amazonaws.com/spring-boot-hello:v_64",
@@ -19,7 +16,5 @@
         }
       ]
     }
-  ],
-  "networkMode": "awsvpc",
-  "cpu": "1024"
+  ]
 }
