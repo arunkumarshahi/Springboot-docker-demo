@@ -10,8 +10,8 @@
       "essential": true,
       "portMappings": [
         {
-          "containerPort": 5000,
-           "hostPort": 8080
+          "containerPort": 8081,
+           "hostPort": 8081
         }
       ]
     }
