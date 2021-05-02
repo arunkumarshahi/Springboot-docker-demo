@@ -24,11 +24,11 @@ aws ecs register-task-definition --family ${FAMILY} --cli-input-json file://${WO
 # Update the service with the new task definition and desired count
 TASK_REVISION=`aws ecs describe-task-definition --task-definition ${NAME} | egrep "revision" | tr "/" " " | awk '{print $2}' | sed 's/"$//'`
 DESIRED_COUNT=`aws ecs describe-services --services ${SERVICE_NAME} | egrep "desiredCount" | tr "/" " " | awk '{print $2}' | sed 's/,$//'`
-DESIRED_COUNT=1
+SERVICES=`aws ecs describe-services --services ${SERVICE_NAME} --cluster ${CLUSTER} --region ${REGION}`
 #Create or update service
 if [ "$SERVICES" == "" ]; then
   echo "entered existing service"
-  DESIRED_COUNT=`aws ecs describe-services --services ${SERVICE_NAME} --cluster ${CLUSTER} --region ${REGION} | jq .services[].desiredCount`
+  DESIRED_COUNT=`aws ecs describe-services --services ${SERVICE_NAME} --cluster ${CLUSTER} --region ${REGION} `
   if [ ${DESIRED_COUNT} = "0" ]; then
     DESIRED_COUNT="1"
   fi
