@@ -29,8 +29,9 @@ if [ "$SERVICES" != "" ]; then
     DESIRED_COUNT="1"
   fi
   aws ecs update-service --cluster ${CLUSTER} --region ${REGION} --service ${SERVICE_NAME} --task-definition ${FAMILY}:${REVISION} --desired-count ${DESIRED_COUNT}
+  aws ecs update-service --cluster ${CLUSTER} --region ${REGION} --service ${SERVICE_NAME} --task-definition ${FAMILY}:${REVISION} --desired-count ${DESIRED_COUNT}
 else
   echo "entered new service"
-  #aws ecs create-service --service-name ${SERVICE_NAME} --desired-count 1 --task-definition ${FAMILY} --cluster ${CLUSTER} --region ${REGION}
-  aws ecs update-service --cluster ${CLUSTER} --service ${SERVICE_NAME} --task-definition ${FAMILY}:${REVISION} --desired-count 1
+  aws ecs create-service --service-name ${SERVICE_NAME} --desired-count 1 --task-definition ${FAMILY} --cluster ${CLUSTER} --region ${REGION}
+  #aws ecs update-service --cluster ${CLUSTER} --service ${SERVICE_NAME} --task-definition ${FAMILY}:${REVISION} --desired-count 1
 fi

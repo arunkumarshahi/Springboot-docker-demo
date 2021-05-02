@@ -58,3 +58,4 @@ Create a ECS cluster giving docker image name in conainer configuration
 
 link to folllwing for more --> https://dzone.com/articles/deploying-spring-boot-to-ecs-part-2
 
+aws ecs update-service --cluster getting-started --region us-east-1 --service spring-boot-hello-service --task-definition spring-boot-hello:15 --desired-count 1
