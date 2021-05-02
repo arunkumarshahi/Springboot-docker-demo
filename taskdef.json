@@ -2,7 +2,7 @@
   "family": "spring-boot-hello",
   "containerDefinitions": [
     {
-      "image": "%REPOSITORY_URI%:v_%BUILD_NUMBER%",
+      "image": "571575437313.dkr.ecr.us-east-1.amazonaws.com/spring-boot-hello:v_64",
       "name": "spring-boot-hello",
       "cpu": 10,
       "memory": 256,
