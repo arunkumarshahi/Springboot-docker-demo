@@ -1,6 +1,8 @@
 {
   "family": "spring-boot-hello",
   "volumes": [],
+  "executionRoleArn": "arn:aws:iam::571575437313:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::571575437313:role/ecsTaskExecutionRole",
   "taskDefinitionArn": "arn:aws:ecs:us-east-1:571575437313:task-definition/spring-boot-hello:4",
   "containerDefinitions": [
     {
@@ -17,5 +19,12 @@
         }
       ]
     }
-  ]
+  ],
+  "networkMode": "awsvpc",
+  "cpu": "1024",
+  "revision": 1,
+  "status": "ACTIVE",
+  "inferenceAccelerators": null,
+  "proxyConfiguration": null,
+  "volumes": []
 }
