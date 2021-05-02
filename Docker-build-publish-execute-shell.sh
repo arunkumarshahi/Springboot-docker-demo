@@ -22,7 +22,7 @@ SERVICES=`aws ecs describe-services --services ${SERVICE_NAME} --cluster ${CLUST
 #Get latest revision
 REVISION=`aws ecs describe-task-definition --task-definition ${NAME} --region ${REGION} `
 #Create or update service
-if [ "$SERVICES" == "" ]; then
+if [ "$SERVICES" != "" ]; then
   echo "entered existing service"
   DESIRED_COUNT=`aws ecs describe-services --services ${SERVICE_NAME} --cluster ${CLUSTER} --region ${REGION} `
   if [ ${DESIRED_COUNT} = "0" ]; then

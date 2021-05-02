@@ -21,10 +21,5 @@
     }
   ],
   "networkMode": "awsvpc",
-  "cpu": "1024",
-  "revision": 1,
-  "status": "ACTIVE",
-  "inferenceAccelerators": null,
-  "proxyConfiguration": null,
-  "volumes": []
+  "cpu": "1024"
 }
