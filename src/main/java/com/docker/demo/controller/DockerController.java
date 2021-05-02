@@ -8,6 +8,6 @@ public class DockerController {
 
 	@GetMapping("/test")
 	public String getDockerInfo() {
-		return "Docker is Runnig";
+		return "Docker is Runnig- rev1";
 	}
 }
